@@ -1,0 +1,94 @@
+.kitchen {
+  padding-bottom: 226px;
+  background-image: url("../img/content/chef-lg.png");
+  background-repeat: no-repeat;
+  background-position: top 57px left 0%;
+
+  & > .container {
+    max-width: 1920px;
+  }
+}
+
+.kitchen-content {
+  position: relative;
+  margin-left: auto;
+  width: fit-content;
+
+  &__img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  &__details {
+    position: absolute;
+    top: 110px;
+    right: calc(100% - 110px);
+  }
+}
+
+.tabs-kitchen {
+  width: 741px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+    padding-top: 8px;
+    padding-bottom: 2px;
+    background-color: var(--color-primary);
+  }
+
+  &__header-item {
+    color: var(--white);
+    font-size: 24px;
+    line-height: 1.5;
+    font-style: italic;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &--active {
+      border-bottom: 2px solid #fff;
+    }
+
+    & span {
+      font-size: 32px;
+    }
+  }
+
+  &__content {
+  }
+
+  &__content-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 68px;
+    padding-top: 76px;
+    padding-bottom: 36px;
+    text-align: center;
+
+    & > img {
+      margin-bottom: 36px;
+      max-width: 329px;
+      object-fit: contain;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 12px;
+    max-width: 327px;
+    font-size: 40px;
+    letter-spacing: -0.075em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+  }
+
+  &__content-text {
+    margin-bottom: 18px;
+    font-size: 18px;
+  }
+}
