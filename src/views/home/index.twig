@@ -8,10 +8,16 @@
 {% set home_page_modules_path = 'modules/home-page/' %}
 
 {% block content %}
+  {% include './../layouts/main/components/helper.twig' %}
+  {% include './../layouts/main/modules/hero.twig' %}
+  {% include './../layouts/main/modules/products.twig' %}
+  {% include './../layouts/main/modules/recipes.twig' %}
+  {% include './../layouts/main/modules/kitchen.twig' %}
 {% endblock %}
 
 {% block modals %}
 {% endblock %}
 
 {% block scripts %}
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 {% endblock %}
