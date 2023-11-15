@@ -1,0 +1,18 @@
+module.exports = [
+  "./tasks/browser-sync",
+  "./tasks/clean",
+  "./tasks/fonts",
+  "./tasks/gzip",
+  "./tasks/htaccess",
+  "./tasks/inject",
+  "./tasks/json",
+  "./tasks/media",
+  "./tasks/pwa",
+  "./tasks/revision",
+  "./tasks/scripts",
+  "./tasks/styles",
+  "./tasks/svg",
+  "./tasks/twig",
+  "./tasks/watch",
+  "./tasks/resources",
+]
