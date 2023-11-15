@@ -3,52 +3,42 @@
 {% import 'ui/buttons.twig' as btn %}
 {% import 'ui/links.twig' as link %}
 {% import 'ui/form.twig' as form %}
-{% block variables %}{% endblock %}
+{% block variables %}
+{% endblock %}
 
 {% set layout_components_path = 'layouts/main/components/' %}
 {% set layout_modules_path = 'layouts/main/modules/' %}
 
 <!DOCTYPE html>
 <html lang="en">
+  {% include layout_modules_path ~ 'head.twig' %}
 
-{% include layout_modules_path ~ 'head.twig' %}
+  <body class="{{ page_class }}">
+    <div class="wrapper">
+      {% include layout_modules_path ~ 'header.twig' %}
 
-<body class="{{ page_class }}">
-<div class="wrapper">
-  {% include layout_modules_path ~ 'header.twig' %}
+      <div class="content pt-header-height">
+        {% block content %}
+        {% endblock %}
+      </div>
 
-  <div class="content pt-header-height">
-    {% block content %}{% endblock %}
-  </div>
+      {% include layout_components_path ~ 'modals/modal.twig' %}
+      {% include layout_modules_path ~ 'footer.twig' %}
 
-  {% include layout_components_path ~ 'modals/modal.twig' %}
-  {% include layout_modules_path ~ 'footer.twig' %}
+      {% block modals %}
+      {% endblock %}
+    </div>
 
-  {% block modals %}{% endblock %}
-</div>
-
-<script>
-  if (navigator.serviceWorker) {
-    window.addEventListener("load", () => {
-      navigator
-        .serviceWorker
-        .register("./service-worker.js")
-        .then(
-          registration => {
-            console.log("[SW]: Registration successful: ", registration)
-          },
-          error => {
-            console.warn(`[SW]: Registration failed: ${error}`)
-          },
-        )
-    })
-  }
-</script>
-<script src="./js/main.js"></script>
-{% if prod != true %}
-  {{ dev.menu() }}
-{% endif %}
-{% block scripts %}{% endblock %}
-</body>
+    <script>
+      if (navigator.serviceWorker) { window.addEventListener("load", () => { navigator .serviceWorker
+      .register("./service-worker.js") .then( registration => { console.log("[SW]: Registration successful: ",
+      registration) }, error => { console.warn(`[SW]: Registration failed: ${error}`) }, ) }) }
+    </script>
+    {% if prod != true %}
+      {{ dev.menu() }}
+    {% endif %}
+    {% block scripts %}
+    {% endblock %}
+    <script src="./js/main.js"></script>
+  </body>
 </html>
-
