@@ -1,0 +1,89 @@
+.hero {
+  & > .container {
+    padding-bottom: 29px;
+    max-width: 1920px;
+  }
+}
+
+.hero-swiper {
+  &__slide {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    cursor: default;
+
+    & > img {
+      position: absolute;
+      top: 57px;
+      left: -30px;
+      width: 100%;
+      max-width: 919px;
+      z-index: 1;
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    max-width: 1112px;
+    height: 720px;
+    color: #676767;
+    background-color: #f5f5f5;
+    background-image: url("../img/content/sugar.png");
+    background-repeat: no-repeat;
+    background-position: top 45px right 0;
+
+    & h2 {
+      margin-bottom: 15px;
+      max-width: 317px;
+      font-size: 96px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    & p {
+      margin-bottom: 33px;
+      max-width: 440px;
+    }
+  }
+
+  &__details {
+    margin: 107px 0 0 165px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 252px;
+    height: 50px;
+    color: #fff;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: opacity 250ms ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.hero-swiper-pagination {
+  bottom: 78px !important;
+  left: 32px !important;
+
+  & .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    opacity: 1;
+  }
+
+  & .swiper-pagination-bullet-active {
+    background-color: var(--color-primary);
+  }
+}
