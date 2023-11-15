@@ -1,5 +1,155 @@
 .footer {
-  height: 5vh;
+  margin-top: auto;
+  background-color: #fcfcfc;
 
-  background-color: silver;
+  &__title {
+    position: relative;
+    margin-bottom: 30px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-primary);
+    }
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+.footer-contact {
+  background-color: #fff;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 136px;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__questions {
+    display: flex;
+
+    & h4 {
+      margin-right: 68px;
+      text-decoration: underline;
+      text-decoration-color: #ccc;
+    }
+
+    & ul {
+      display: flex;
+      gap: 55px;
+
+      & a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+    }
+  }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 38px;
+  padding-bottom: 55px;
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 854px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__address {
+    display: flex;
+    align-items: start;
+    gap: 82px;
+
+    & address {
+      width: 100%;
+      font-style: normal;
+    }
+
+    & img {
+      width: 100%;
+      max-width: 330px;
+      height: 100%;
+      max-height: 206px;
+    }
+
+    &-item {
+      &:first-child {
+        padding-bottom: 30px;
+        border-bottom: 2px solid var(--color-primary);
+
+        & a {
+          display: flex;
+          max-width: 130px;
+        }
+      }
+      &:last-child {
+        padding-top: 30px;
+      }
+
+      & h4 {
+        margin-bottom: 13px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  border-top: 1px solid #d9d9d9;
+  font-size: 14px;
+
+  & a {
+    display: flex;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+  }
+
+  &__links {
+    display: flex;
+    gap: 65px;
+  }
+
+  &__companies {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
 }

@@ -1,4 +1,142 @@
-<footer class='footer'>
+{% set footerData = json('footerData') %}
+
+<footer class="footer">
+  <div class="footer-contact">
+    <div class="container footer-contact__container">
+      <ul class="footer-contact__socials">
+        {% for social in footerData.socials %}
+          <li>
+            <a href="#">
+              <!--         <svg width="35" height="35">
+              <use href="{{ social }}"></use>
+            </svg>         -->
+              {{ social }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="footer-contact__questions">
+        <h4>
+          Have More Questions?
+        </h4>
+
+        <ul>
+          <li>
+            <a class="footer__link" href="tel:5304235784">
+              <svg width="17" height="17">
+                <use href="./icon/icons/icons.svg#icon-phone"></use>
+              </svg>(530) 423 5784
+            </a>
+          </li>
+          <li>
+            <a class="footer__link" href="mailto:info@wafflepantry.com">
+              <svg width="19" height="14">
+                <use href="./icon/icons/icons.svg#icon-email"></use>
+              </svg>info@wafflepantry.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <div class="container">
+    <div class="footer-content">
+      <div class="footer-content__links">
+        <div>
+          <h3 class="footer__title">
+            information
+          </h3>
+
+          <!--         <ul class="footer-content__list">
+            {% for info in footerLinks.information %}
+            <li>
+              <a class="footer__link" href="#">{{ info }}</a>
+            </li>
+            {% endfor %}
+          </ul>         -->
+        </div>
+
+        <div>
+          <h3 class="footer__title">
+            customer service
+          </h3>
+
+          <!--         <ul class="footer-content__list">
+            {% for service in footerLinks.services %}
+            <li>
+              <a class="footer__link" href="#">{{ service }}</a>
+            </li>
+            {% endfor %}
+          </ul>         -->
+        </div>
+
+        <div>
+          <h3 class="footer__title">
+            my account
+          </h3>
+
+          <!--         <ul class="footer-content__list">
+            {% for account in footerLinks.accounts %}
+            <li>
+              <a class="footer__link" href="#">{{ account }}</a>
+            </li>
+            {% endfor %}
+          </ul>         -->
+        </div>
+      </div>
+
+      <div class="footer-content__address">
+        <address>
+          <ul>
+            <li class="footer-content__address-item">
+              <h4>
+                Main Office & Distr. Center:
+              </h4>
+              <a class="footer__link" href="#">847 E Edna Covina, CA 91723</a>
+            </li>
+            <li class="footer-content__address-item">
+              <h4>
+                Distribution Center:
+              </h4>
+              <a class="footer__link" href="#">Philadelphia, PA 19133</a>
+            </li>
+          </ul>
+        </address>
+
+        <img src="./img/content/map.png" alt="usa map" />
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright footer-copyright__container">
+    <div class="container">
+      <!--         <ul class="footer-copyright__links">
+        {% for links in footerCopyright.links %}
+        <li>
+          <a class="footer__link" href="#">{{ links }}</a>
+        </li>
+        {% endfor %}
+      </ul>         -->
+
+      <p class="footer-copyright__text">
+        Waffle Pantry® is a registered trademark of Cambridgeshire Corp. Waffle Pantry © 2023
+      </p>
+
+      <!--         <ul class="footer-copyright__companies">
+        {% for company in footerCopyright.companies %}
+        <li>
+          <a href="#">
+            <svg
+              width="{{ company.size.width }}"
+              height="{{ company.size.height }}"
+            >
+              <use href="{{ company.icon }}"></use>
+            </svg>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>         -->
+    </div>
   </div>
 </footer>
