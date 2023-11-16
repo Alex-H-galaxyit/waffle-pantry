@@ -1,4 +1,4 @@
-export function Hero() {
+export function hero() {
   const swiper = new Swiper(".swiper-hero", {
     loop: true,
 
