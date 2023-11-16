@@ -7,7 +7,17 @@
   }
 
   &__logo {
-    margin-right: 60px;
+    display: flex;
+    align-items: end;
+    padding: 12px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    height: 140%;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
 
     & svg {
       fill: #623c21;
@@ -17,7 +27,76 @@
 
 // main nav
 .main-nav {
+  position: relative;
   background-color: #f6f6f6;
+
+  & > .container {
+    position: relative;
+  }
+
+  &__logo-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 59px;
+      height: 40px;
+      transform: translateX(-50%);
+      background-image: url("../img/content/flag-logo.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 1;
+    }
+
+    & img {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 59px;
+      z-index: -1;
+    }
+  }
+
+  &__logo-bg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 134px;
+    height: 100px;
+    background-color: #f6f6f6;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    z-index: 2;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      background-color: #f6f6f6;
+    }
+
+    &::before {
+      right: 100%;
+      background-image: radial-gradient(circle at bottom left, #fff, #fff 75%, transparent 75%);
+    }
+
+    &::after {
+      left: 100%;
+      background-image: radial-gradient(circle at bottom right, #fff, #fff 75%, transparent 75%);
+    }
+  }
 
   & ul {
     display: flex;
@@ -42,7 +121,6 @@
     height: 35px;
     text-transform: uppercase;
     color: #fff;
-    // font-weight: 600;
     font-family: var(--font-dupla-demi);
     background-color: #b8b8b8;
     transition: opacity 250ms ease-in-out;
@@ -60,8 +138,11 @@
 
 // navigation
 .menu {
+  position: relative;
   display: flex;
   align-items: center;
+  margin-left: 167px;
+  z-index: 2;
 
   &__wrapper {
     display: flex;
@@ -81,7 +162,6 @@
   &__link {
     display: flex;
     color: #676767;
-    // font-weight: 600;
     text-transform: uppercase;
     transition: color 250ms ease-in-out;
 

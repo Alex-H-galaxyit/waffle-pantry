@@ -25,6 +25,7 @@ html {
 body {
   padding-right: var(--current-scrollbar-width);
   background-color: var(--bg-primary);
+  line-height: 1.5;
 
   &._lock {
     overflow: hidden;
@@ -168,4 +169,17 @@ fieldset {
 
 .important_none {
   display: none;
+}
+
+.section-title {
+  margin-bottom: 16px;
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  & span {
+    color: var(--color-primary);
+    font-weight: 400;
+    font-style: italic;
+  }
 }

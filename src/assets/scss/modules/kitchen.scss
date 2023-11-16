@@ -1,5 +1,5 @@
 .kitchen {
-  padding-bottom: 226px;
+  padding-bottom: 246px;
   background-image: url("../img/content/chef-lg.png");
   background-repeat: no-repeat;
   background-position: top 57px left 0%;
@@ -55,11 +55,9 @@
     }
 
     & span {
+      margin-bottom: -2px;
       font-size: 32px;
     }
-  }
-
-  &__content {
   }
 
   &__content-item {
@@ -80,8 +78,9 @@
 
   &__content-title {
     margin-bottom: 12px;
-    max-width: 327px;
+    max-width: 333px;
     font-size: 40px;
+    font-weight: 400;
     letter-spacing: -0.075em;
     color: var(--color-primary);
     text-transform: uppercase;
