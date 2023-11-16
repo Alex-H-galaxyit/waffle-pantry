@@ -1,16 +1,20 @@
-{% set footerData = json('footerData') %}
+{% set footerSocials = json('footerSocials') %}
+{% set footerInfo = json('footerInfo') %}
+{% set footerServices = json('footerServices') %}
+{% set footerAccounts = json('footerAccounts') %}
+{% set footerLinks = json('footerLinks') %}
+{% set footerCompanies = json('footerCompanies') %}
 
 <footer class="footer">
   <div class="footer-contact">
     <div class="container footer-contact__container">
       <ul class="footer-contact__socials">
-        {% for social in footerData.socials %}
+        {% for social in footerSocials.socials %}
           <li>
             <a href="#">
-              <!--         <svg width="35" height="35">
-              <use href="{{ social }}"></use>
-            </svg>         -->
-              {{ social }}
+              <svg width="35" height="35">
+                <use href="{{ social }}"></use>
+              </svg>
             </a>
           </li>
         {% endfor %}
@@ -25,14 +29,14 @@
           <li>
             <a class="footer__link" href="tel:5304235784">
               <svg width="17" height="17">
-                <use href="./icon/icons/icons.svg#icon-phone"></use>
+                <use href="./icon/icons/icons.svg#phone"></use>
               </svg>(530) 423 5784
             </a>
           </li>
           <li>
             <a class="footer__link" href="mailto:info@wafflepantry.com">
               <svg width="19" height="14">
-                <use href="./icon/icons/icons.svg#icon-email"></use>
+                <use href="./icon/icons/icons.svg#mail"></use>
               </svg>info@wafflepantry.com
             </a>
           </li>
@@ -48,13 +52,11 @@
             information
           </h3>
 
-          <!--         <ul class="footer-content__list">
-            {% for info in footerLinks.information %}
-            <li>
-              <a class="footer__link" href="#">{{ info }}</a>
-            </li>
+          <ul class="footer-content__list">
+            {% for info in footerInfo.information %}
+              <li><a class="footer__link" href="#">{{ info }}</a></li>
             {% endfor %}
-          </ul>         -->
+          </ul>
         </div>
 
         <div>
@@ -62,13 +64,11 @@
             customer service
           </h3>
 
-          <!--         <ul class="footer-content__list">
-            {% for service in footerLinks.services %}
-            <li>
-              <a class="footer__link" href="#">{{ service }}</a>
-            </li>
+          <ul class="footer-content__list">
+            {% for service in footerServices.services %}
+              <li><a class="footer__link" href="#">{{ service }}</a></li>
             {% endfor %}
-          </ul>         -->
+          </ul>
         </div>
 
         <div>
@@ -76,13 +76,11 @@
             my account
           </h3>
 
-          <!--         <ul class="footer-content__list">
-            {% for account in footerLinks.accounts %}
-            <li>
-              <a class="footer__link" href="#">{{ account }}</a>
-            </li>
+          <ul class="footer-content__list">
+            {% for account in footerAccounts.accounts %}
+              <li><a class="footer__link" href="#">{{ account }}</a></li>
             {% endfor %}
-          </ul>         -->
+          </ul>
         </div>
       </div>
 
@@ -109,34 +107,30 @@
     </div>
   </div>
 
-  <div class="footer-copyright footer-copyright__container">
-    <div class="container">
-      <!--         <ul class="footer-copyright__links">
-        {% for links in footerCopyright.links %}
-        <li>
-          <a class="footer__link" href="#">{{ links }}</a>
-        </li>
+  <div class="footer-copyright">
+    <div class="container footer-copyright__container">
+      <ul class="footer-copyright__links">
+        {% for link in footerLinks.links %}
+          <li><a class="footer__link" href="#">{{ link }}</a></li>
         {% endfor %}
-      </ul>         -->
+      </ul>
 
       <p class="footer-copyright__text">
         Waffle Pantry® is a registered trademark of Cambridgeshire Corp. Waffle Pantry © 2023
       </p>
 
-      <!--         <ul class="footer-copyright__companies">
-        {% for company in footerCopyright.companies %}
-        <li>
-          <a href="#">
-            <svg
-              width="{{ company.size.width }}"
-              height="{{ company.size.height }}"
-            >
-              <use href="{{ company.icon }}"></use>
-            </svg>
-          </a>
-        </li>
+      <ul class="footer-copyright__companies">
+        {% for company in footerCompanies.companies %}
+          <li>
+            <a href="#">
+              <img src="{{ company.icon }}"
+                alt="logo"
+                width="{{ company.size.width }}"
+                height="{{ company.size.height }}" />
+            </a>
+          </li>
         {% endfor %}
-      </ul>         -->
+      </ul>
     </div>
   </div>
 </footer>
