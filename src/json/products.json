@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "image": "./img/content/products/prod-1.jpg",
+      "sale": false
+    },
+    {
+      "image": "./img/content/products/prod-2.jpg",
+      "sale": "- 25%"
+    },
+    {
+      "image": "./img/content/products/prod-3.jpg",
+      "sale": false
+    },
+    {
+      "image": "./img/content/products/prod-4.jpg",
+      "sale": "- 35%"
+    },
+    {
+      "image": "./img/content/products/prod-1.jpg",
+      "sale": false
+    },
+    {
+      "image": "./img/content/products/prod-2.jpg",
+      "sale": "- 25%"
+    },
+    {
+      "image": "./img/content/products/prod-3.jpg",
+      "sale": false
+    },
+    {
+      "image": "./img/content/products/prod-4.jpg",
+      "sale": "- 35%"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "socials": [
+    "./icon/icons/icons.svg#instagram",
+    "./icon/icons/icons.svg#pinterest",
+    "./icon/icons/icons.svg#facebook",
+    "./icon/icons/icons.svg#linkedin",
+    "./icon/icons/icons.svg#twitter"
+  ]
+}
