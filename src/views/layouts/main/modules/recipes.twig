@@ -1,7 +1,9 @@
+{% set recipes = json('recipes') %}
+
 <section class="recipes">
   <div class="container">
     <div class="recipes-content">
-      <h2 class="recipes-content__title">
+      <h2 class="section-title">
         Authentic <span>recipes</span>
       </h2>
       <p class="recipes-content__text">
@@ -10,43 +12,41 @@
     </div>
 
     <ul class="recipes-list">
-      <!--   {% for recipe in recipes %}
-      <li class="recipes-item">
-        <a href="#">
-          <img src="{{ recipe }}" alt="food" />
-        </a>
+      {% for recipe in recipes.recipes %}
+        <li class="recipes-item">
+          <a href="#"><img src="{{ recipe }}" alt="food" /></a>
 
-        <div class="recipes-item__content">
-          <button class="recipes-item__share" type="button">
-            <svg width="20" height="23">
-              <use href="./images/icons.svg#icon-share"></use>
-            </svg>
-          </button>
+          <div class="recipes-item__content">
+            <button class="recipes-item__share" type="button">
+              <svg width="20" height="23">
+                <use href="./icon/icons/icons.svg#share"></use>
+              </svg>
+            </button>
 
-          <div class="recipes-item__rating">
-            <svg width="135" height="18">
-              <use href="./images/icons.svg#icon-rating"></use>
-            </svg>
+            <div class="recipes-item__rating">
+              <svg width="135" height="18">
+                <use href="./icon/icons/icons.svg#stars"></use>
+              </svg>
+            </div>
+
+            <a href="#">
+              <h3 class="recipes-item__title">
+                traditional liege waffle
+              </h3>
+            </a>
+
+            <div class="recipes-item__details">
+              <svg width="20" height="20">
+                <use href="./icon/icons/icons.svg#clock"></use>
+              </svg>45 min
+            </div>
+
+            <p class="recipes-item__text">
+              Try one of our pearl sugar recipe at the comfort of your home. In the kitchen with waffle pantry.
+            </p>
           </div>
-
-          <a href="#">
-            <h3 class="recipes-item__title">traditional liege waffle</h3>
-          </a>
-
-          <div class="recipes-item__details">
-            <svg width="20" height="20">
-              <use href="./images/icons.svg#icon-clock"></use>
-            </svg>
-            45 min
-          </div>
-
-          <p class="recipes-item__text">
-            Try one of our pearl sugar recipe at the comfort of your home. In
-            the kitchen with waffle pantry.
-          </p>
-        </div>
-      </li>
-      {% endfor %}   -->
+        </li>
+      {% endfor %}
     </ul>
 
     <a class="recipes__button" href="#">
