@@ -1,3 +1,5 @@
+{% set products = json('products') %}
+
 <section class="products">
   <div class="container">
     <div class="tabs">
@@ -11,57 +13,71 @@
         </div>
       </div>
 
-      <div class="tabs__content">
+      <div class="tabs__content tabs-products__content">
         <div class="tabs__content-item">
           <div class="swiper swiper-prod">
             <div class="swiper-wrapper">
-              <!--     {% for product in products %}
-              <div class="swiper-slide product">
-                {% if product.sale %}
-                <div class="product__sale">{{ product.sale }}</div>
-                {% endif %}
-
-                <button class="product__favorite" type="button">
-                  <svg width="30" height="27">
-                    <use href="./icon/icons/icons.svg#heart"></use>
-                  </svg>
-                </button>
-
-                <img src="{{ product.image }}" alt="product image" />
-
-                <div class="product__content">
-                  <h3 class="product__title">HVD-A57-Liege-Waffle-Iron</h3>
-
-                  <div class="product__aftertitle">
-                    <h4>model wedceat</h4>
-                    <p>$1,800,00</p>
-                  </div>
-
-                  <div class="product__rating">
-                    <div>
-                      <svg width="120" height="21">
-                        <use href="./icon/icons/icons.svg#rating"></use>
-                      </svg>
-                      <span>(34)</span>
+              {% for product in products.products %}
+                <div class="swiper-slide product">
+                  {% if product.sale %}
+                    <div class="product__sale">
+                      {{ product.sale }}
                     </div>
-                    <p>$1,401,60</p>
-                  </div>
+                  {% endif %}
 
-                  <div class="product__control">
-                    <div>
-                      <p>Buy 4 or more $1,200,00</p>
-                      <p>Limit 10 per order</p>
+                  <button class="product__favorite" type="button">
+                    <svg width="30" height="27">
+                      <use href="./icon/icons/icons.svg#heart"></use>
+                    </svg>
+                  </button>
+
+                  <img src="{{ product.image }}" alt="product image" />
+
+                  <div class="product__content">
+                    <h3 class="product__title">
+                      HVD-A57-Liege-Waffle-Iron
+                    </h3>
+
+                    <div class="product__aftertitle">
+                      <h4>
+                        model wedceat
+                      </h4>
+                      <p>
+                        $1,800,00
+                      </p>
                     </div>
 
-                    <button type="button">
-                      <svg width="27" height="27">
-                        <use href="./icon/icons/icons.svg#cart"></use>
-                      </svg>
-                    </button>
+                    <div class="product__rating">
+                      <div>
+                        <svg width="120" height="21">
+                          <use href="./icon/icons/icons.svg#stars"></use>
+                        </svg>
+                        <span>(34)</span>
+                      </div>
+                      <p>
+                        $1,401,60
+                      </p>
+                    </div>
+
+                    <div class="product__control">
+                      <div>
+                        <p>
+                          Buy 4 or more $1,200,00
+                        </p>
+                        <p>
+                          Limit 10 per order
+                        </p>
+                      </div>
+
+                      <button type="button">
+                        <svg width="27" height="27">
+                          <use href="./icon/icons/icons.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              {% endfor %}     -->
+              {% endfor %}
             </div>
           </div>
 
