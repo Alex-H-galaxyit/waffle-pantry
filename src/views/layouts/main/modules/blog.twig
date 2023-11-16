@@ -1,0 +1,65 @@
+{% set blogs = json('blogs') %}
+
+<section class="blog">
+  <div class="container">
+    <div class="tabs-blog">
+      <div class="tabs-blog__header">
+        <div class="tabs-blog__header-item tabs-blog__header-item--active">
+          RECENT
+        </div>
+        <div class="tabs-blog__header-item">
+          POPULAR
+        </div>
+      </div>
+
+      <div class="tabs-blog__content">
+        <div class="tabs-blog__content-item">
+          <div class="blog-content">
+            <!-- CHANGE CLASS TO COMMON -->
+            <h2 class="section-title">
+              FRESH <span>OFF THE PRESS</span>
+            </h2>
+            <p class="recipes-content__text">
+              Try one of our pearl sugar recipe at the comfort of your home. In the kitchen with waffle pantry.
+            </p>
+          </div>
+
+          <ul class="blog-list">
+            {% for blog in blogs.blogs %}
+              <li class="blog-item">
+                <a href="#"><img src="{{ blog }}" alt="food" /></a>
+
+                <div class="recipes-item__content blog-item__content">
+                  <h3 class="blog-item__title">
+                    traditional liege waffle
+                  </h3>
+
+                  <p class="blog-item__aftertitle">
+                    Name of the press
+                  </p>
+
+                  <p class="blog-item__text">
+                    Try one of our pearl sugar recipe at the comfort of your home. In the kitchen with waffle pantry.
+                    But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                    born.
+                  </p>
+
+                  <a class="blog-item__button" href="#">Read more</a>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+
+          <a class="recipes__button" href="#">
+            <span>discover more</span>
+            <img src="./img/content/circle-chevron.png" alt="icon" />
+          </a>
+        </div>
+
+        <div class="tabs-blog__content-item">
+          CONTENT 2
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
