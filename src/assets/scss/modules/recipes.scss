@@ -27,8 +27,13 @@
     color: var(--color-primary);
     background: none;
 
+    &:hover span {
+      padding-right: 14px;
+    }
+
     & span {
       margin-right: -38px;
+      transition: all 300ms ease-in-out;
     }
   }
 }

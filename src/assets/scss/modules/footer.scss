@@ -55,11 +55,16 @@
 
       &:hover {
         opacity: 0.75;
+
+        & svg {
+          scale: 1.25;
+        }
       }
     }
 
     & svg {
       fill: var(--color-primary);
+      transition: scale 250ms ease-in-out;
     }
   }
 
