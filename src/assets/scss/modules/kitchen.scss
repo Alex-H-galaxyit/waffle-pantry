@@ -43,6 +43,9 @@
   }
 
   &__header-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     color: var(--white);
     font-size: 24px;
     line-height: 1.5;
@@ -51,6 +54,7 @@
     cursor: pointer;
 
     &--active {
+      font-weight: 700;
       border-bottom: 2px solid #fff;
     }
 
@@ -68,6 +72,15 @@
     padding-top: 76px;
     padding-bottom: 36px;
     text-align: center;
+
+    &:not(:first-child) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 645px;
+      font-size: 40px;
+      font-weight: 700;
+    }
 
     & > img {
       margin-bottom: 36px;
