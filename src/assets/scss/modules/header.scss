@@ -90,12 +90,12 @@
 
     &::before {
       right: calc(100% - 2px);
-      background-image: radial-gradient(circle at bottom left, #fff, #fff 75%, transparent 75%);
+      background-image: radial-gradient(circle at bottom -8px left 0, #fff, #fff 75%, transparent 75%);
     }
 
     &::after {
       left: calc(100% - 2px);
-      background-image: radial-gradient(circle at bottom right, #fff, #fff 75%, transparent 75%);
+      background-image: radial-gradient(circle at bottom -8px right 0, #fff, #fff 75%, transparent 75%);
     }
   }
 
