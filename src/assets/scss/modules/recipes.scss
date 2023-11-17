@@ -70,7 +70,12 @@
     background: none;
     border: 1px solid #b8b8b8;
     border-radius: 6px;
+    transition: background-color 200ms ease-in-out;
     z-index: 1;
+
+    &:hover {
+      background-color: #fafafa;
+    }
 
     & svg {
       fill: #b8b8b8;

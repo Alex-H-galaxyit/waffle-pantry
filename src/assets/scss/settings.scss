@@ -183,3 +183,15 @@ fieldset {
     font-style: italic;
   }
 }
+
+[class*="__header-item"]:not(.tabs-kitchen__header-item) {
+  transition: background-color 200ms ease-in-out;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+[class*="__header-item--active"] {
+  pointer-events: none;
+}

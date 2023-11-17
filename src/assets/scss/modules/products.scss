@@ -164,6 +164,11 @@
       border: 1px solid var(--color-primary);
       border-radius: 6px;
       background-color: #fff;
+      transition: background-color 200ms ease-in-out;
+
+      &:hover {
+        background-color: #fafafa;
+      }
 
       & svg {
         fill: var(--color-primary);
