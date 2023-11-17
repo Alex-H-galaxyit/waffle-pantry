@@ -40,6 +40,10 @@
     top: 100%;
     left: 0;
 
+    &:hover::after {
+      bottom: -30px;
+    }
+
     &::after {
       content: "";
       display: block;
@@ -52,6 +56,8 @@
       background-image: url("../img/content/flag-logo.png");
       background-repeat: no-repeat;
       background-size: contain;
+      transition: bottom 200ms ease-in-out;
+      pointer-events: none;
       z-index: 1;
     }
 
@@ -86,6 +92,7 @@
       width: 60px;
       height: 60px;
       background-color: #f6f6f6;
+      pointer-events: none;
     }
 
     &::before {
