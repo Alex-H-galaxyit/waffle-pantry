@@ -2,6 +2,10 @@
   padding-bottom: 34px;
   text-align: center;
   background-color: #f8f8f8;
+
+  &__container {
+    max-width: 1920px;
+  }
 }
 
 .tabs-blog {

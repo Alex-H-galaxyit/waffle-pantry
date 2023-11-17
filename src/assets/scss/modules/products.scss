@@ -1,5 +1,9 @@
 .products {
   background-color: #f8f8f8;
+
+  &__container {
+    max-width: 1920px;
+  }
 }
 
 .swiper-prod {
