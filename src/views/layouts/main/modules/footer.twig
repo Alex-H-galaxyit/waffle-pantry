@@ -1,22 +1,19 @@
-{% set footerSocials = json('footerSocials') %}
-{% set footerInfo = json('footerInfo') %}
-{% set footerServices = json('footerServices') %}
-{% set footerAccounts = json('footerAccounts') %}
-{% set footerLinks = json('footerLinks') %}
-{% set footerCompanies = json('footerCompanies') %}
+{% set footerData = json('footer') %}
 
 <footer class="footer">
   <div class="footer-contact">
     <div class="container footer-contact__container">
       <ul class="footer-contact__socials">
-        {% for social in footerSocials.socials %}
-          <li>
-            <a href="#">
-              <svg width="35" height="35">
-                <use href="{{ social }}"></use>
-              </svg>
-            </a>
-          </li>
+        {% for socials in footerData %}
+          {% for item in socials.socials %}
+            <li>
+              <a href="#">
+                <svg width="35" height="35">
+                  <use href="{{ item }}"></use>
+                </svg>
+              </a>
+            </li>
+          {% endfor %}
         {% endfor %}
       </ul>
 
@@ -53,8 +50,10 @@
           </h3>
 
           <ul class="footer-content__list">
-            {% for info in footerInfo.information %}
-              <li><a class="footer__link" href="#">{{ info }}</a></li>
+            {% for information in footerData %}
+              {% for item in information.information %}
+                <li><a class="footer__link" href="#">{{ item }}</a></li>
+              {% endfor %}
             {% endfor %}
           </ul>
         </div>
@@ -65,8 +64,10 @@
           </h3>
 
           <ul class="footer-content__list">
-            {% for service in footerServices.services %}
-              <li><a class="footer__link" href="#">{{ service }}</a></li>
+            {% for services in footerData %}
+              {% for item in services.services %}
+                <li><a class="footer__link" href="#">{{ item }}</a></li>
+              {% endfor %}
             {% endfor %}
           </ul>
         </div>
@@ -77,8 +78,10 @@
           </h3>
 
           <ul class="footer-content__list">
-            {% for account in footerAccounts.accounts %}
-              <li><a class="footer__link" href="#">{{ account }}</a></li>
+            {% for accounts in footerData %}
+              {% for item in accounts.accounts %}
+                <li><a class="footer__link" href="#">{{ item }}</a></li>
+              {% endfor %}
             {% endfor %}
           </ul>
         </div>
@@ -110,8 +113,10 @@
   <div class="footer-copyright">
     <div class="container footer-copyright__container">
       <ul class="footer-copyright__links">
-        {% for link in footerLinks.links %}
-          <li><a class="footer__link" href="#">{{ link }}</a></li>
+        {% for links in footerData %}
+          {% for item in links.links %}
+            <li><a class="footer__link" href="#">{{ item }}</a></li>
+          {% endfor %}
         {% endfor %}
       </ul>
 
@@ -120,15 +125,14 @@
       </p>
 
       <ul class="footer-copyright__companies">
-        {% for company in footerCompanies.companies %}
-          <li>
-            <a href="#">
-              <img src="{{ company.icon }}"
-                alt="logo"
-                width="{{ company.size.width }}"
-                height="{{ company.size.height }}" />
-            </a>
-          </li>
+        {% for companies in footerData %}
+          {% for item in companies.companies %}
+            <li>
+              <a href="#">
+                <img src="{{ item.icon }}" alt="logo" width="{{ item.size.width }}" height="{{ item.size.height }}" />
+              </a>
+            </li>
+          {% endfor %}
         {% endfor %}
       </ul>
     </div>

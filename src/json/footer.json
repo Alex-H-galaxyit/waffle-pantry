@@ -1,0 +1,55 @@
+[
+  {
+    "socials": [
+      "./icon/icons/icons.svg#instagram",
+      "./icon/icons/icons.svg#pinterest",
+      "./icon/icons/icons.svg#facebook",
+      "./icon/icons/icons.svg#linkedin",
+      "./icon/icons/icons.svg#twitter"
+    ]
+  },
+  {
+    "information": ["Financing", "Return Policy & Warranty", "About Us", "Shipping Information", "FAQ"]
+  },
+  {
+    "services": ["Contact Us", "Returns", "Gift Vouchers", "Specials"]
+  },
+  {
+    "accounts": ["My Account", "Order History", "Newsletter"]
+  },
+  {
+    "links": ["Privacy Policy", "Terms & Conditions", "Sitemap"]
+  },
+  {
+    "companies": [
+      {
+        "icon": "./img/content/visa.png",
+        "size": {
+          "width": "42",
+          "height": "14"
+        }
+      },
+      {
+        "icon": "./img/content/mastercard.png",
+        "size": {
+          "width": "30",
+          "height": "18"
+        }
+      },
+      {
+        "icon": "./img/content/discover.png",
+        "size": {
+          "width": "60",
+          "height": "10"
+        }
+      },
+      {
+        "icon": "./img/content/comodo.png",
+        "size": {
+          "width": "50",
+          "height": "25"
+        }
+      }
+    ]
+  }
+]
