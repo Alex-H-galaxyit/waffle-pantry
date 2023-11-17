@@ -73,8 +73,13 @@
     display: flex;
     background: none;
 
+    &:hover svg {
+      scale: 1.25;
+    }
+
     & svg {
       fill: #b8b8b8;
+      transition: scale 200ms ease-in-out;
     }
   }
 
