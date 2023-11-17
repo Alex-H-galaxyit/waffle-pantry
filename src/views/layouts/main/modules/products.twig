@@ -1,18 +1,19 @@
 {% set products = json('products') %}
 
 <section class="products">
+  <div class="container products__container">
+    <div class="tabs__header">
+      <div class="tabs__header-item tabs__header-item--active">
+        HOME BAKER
+      </div>
+      <div class="tabs__header-item">
+        <img src="./img/content/chef.png" alt="chef icon" />
+        PROFESSIONAL
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="tabs">
-      <div class="tabs__header">
-        <div class="tabs__header-item tabs__header-item--active">
-          HOME BAKER
-        </div>
-        <div class="tabs__header-item">
-          <img src="./img/content/chef.png" alt="chef icon" />
-          PROFESSIONAL
-        </div>
-      </div>
-
       <div class="tabs__content tabs-products__content">
         <div class="tabs__content-item">
           <div class="swiper swiper-prod">

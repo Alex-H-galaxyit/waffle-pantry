@@ -1,21 +1,21 @@
 {% set blogs = json('blogs') %}
 
 <section class="blog">
+  <div class="container blog__container">
+    <div class="tabs-blog__header">
+      <div class="tabs-blog__header-item tabs-blog__header-item--active">
+        RECENT
+      </div>
+      <div class="tabs-blog__header-item">
+        POPULAR
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="tabs-blog">
-      <div class="tabs-blog__header">
-        <div class="tabs-blog__header-item tabs-blog__header-item--active">
-          RECENT
-        </div>
-        <div class="tabs-blog__header-item">
-          POPULAR
-        </div>
-      </div>
-
       <div class="tabs-blog__content">
         <div class="tabs-blog__content-item">
           <div class="blog-content">
-            <!-- CHANGE CLASS TO COMMON -->
             <h2 class="section-title">
               FRESH <span>OFF THE PRESS</span>
             </h2>
