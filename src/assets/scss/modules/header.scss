@@ -9,9 +9,10 @@
   &__logo {
     display: flex;
     align-items: end;
-    padding: 12px;
+    padding-inline: 10px;
+    padding-bottom: 12px;
     position: absolute;
-    top: -50px;
+    top: -40px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #fff;
@@ -43,7 +44,7 @@
       content: "";
       display: block;
       position: absolute;
-      bottom: -20px;
+      bottom: -16px;
       left: 50%;
       width: 59px;
       height: 40px;
@@ -70,7 +71,7 @@
     justify-content: center;
     align-items: center;
     width: 134px;
-    height: 100px;
+    height: 86px;
     background-color: #f6f6f6;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
