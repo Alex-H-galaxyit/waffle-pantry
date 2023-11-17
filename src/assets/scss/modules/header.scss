@@ -163,6 +163,7 @@
   &__link {
     display: flex;
     color: #676767;
+    font-weight: 600;
     text-transform: uppercase;
     transition: color 250ms ease-in-out;
 
@@ -206,7 +207,7 @@
     }
 
     &::placeholder {
-      opacity: 0.8;
+      opacity: 0.6;
     }
   }
 

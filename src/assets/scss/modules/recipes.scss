@@ -40,6 +40,7 @@
     margin-bottom: 48px;
     margin-inline: auto;
     max-width: 464px;
+    font-size: 18px;
   }
 }
 
@@ -116,7 +117,8 @@
     gap: 5px;
     margin-bottom: 12px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
 
     & svg {
       fill: #676767;
@@ -125,6 +127,7 @@
 
   &__text {
     margin-inline: auto;
-    max-width: 382px;
+    max-width: 464px;
+    font-size: 18px;
   }
 }
