@@ -156,28 +156,36 @@
     display: flex;
   }
 
+  &__column {
+    display: flex;
+    flex: 1 1 33.33333%;
+  }
+
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
     padding-top: 9px;
     padding-bottom: 17px;
     width: 100%;
   }
 
   &__links {
-    display: flex;
     gap: 65px;
     margin-bottom: -10px;
   }
 
   &__text {
+    justify-content: center;
     margin-bottom: -10px;
+    text-align: center;
+    text-wrap: balance;
   }
 
   &__companies {
-    display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
     gap: 24px;
   }
 }

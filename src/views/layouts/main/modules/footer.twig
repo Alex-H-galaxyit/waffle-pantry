@@ -112,7 +112,7 @@
 
   <div class="footer-copyright">
     <div class="container footer-copyright__container">
-      <ul class="footer-copyright__links">
+      <ul class="footer-copyright__links footer-copyright__column">
         {% for links in footerData %}
           {% for item in links.links %}
             <li><a class="footer__link" href="#">{{ item }}</a></li>
@@ -120,11 +120,11 @@
         {% endfor %}
       </ul>
 
-      <p class="footer-copyright__text">
+      <p class="footer-copyright__text footer-copyright__column">
         Waffle Pantry® is a registered trademark of Cambridgeshire Corp. Waffle Pantry © 2023
       </p>
 
-      <ul class="footer-copyright__companies">
+      <ul class="footer-copyright__companies footer-copyright__column">
         {% for companies in footerData %}
           {% for item in companies.companies %}
             <li>
