@@ -2,17 +2,12 @@
 @include font("Consolas", "Consolas-Regular", 400, normal);
 @include font("Consolas", "Consolas-Bold", 700, normal);
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap");
-
 // Dupla
-// @include font("Dupla", "Dupla", 400, normal);
-// @include font("Dupla", "Dupla-Italic", 400, italic);
+@include font("Dupla", "Dupla", 400, normal);
+@include font("Dupla", "Dupla-Italic", 400, italic);
 
-// @include font("Dupla", "Dupla-Bold", 700, normal);
-// @include font("Dupla", "Dupla-BoldItalic", 700, italic);
+@include font("Dupla", "Dupla-Bold", 700, normal);
+@include font("Dupla", "Dupla-BoldItalic", 700, italic);
 
-// @include font("Dupla", "Dupla-DemiBold", 600, normal);
-// @include font("Dupla", "Dupla-DemiBoldItalic", 600, italic);
-
-// @include font("Dupla", "Dupla-Light", 300, normal);
-// @include font("Dupla", "Dupla-LightItalic", 300, italic);
+@include font("Dupla", "Dupla-DemiBold", 600, normal);
+@include font("Dupla", "Dupla-DemiBoldItalic", 600, italic);
