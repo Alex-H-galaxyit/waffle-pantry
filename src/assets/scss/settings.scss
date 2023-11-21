@@ -182,6 +182,14 @@ fieldset {
     font-weight: 600;
     font-style: italic;
   }
+
+  &--second {
+    color: var(--color-primary);
+
+    & span {
+      color: #696969;
+    }
+  }
 }
 
 [class*="__header-item"]:not(.tabs-kitchen__header-item) {
