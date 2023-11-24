@@ -1,16 +1,19 @@
 {
-  "name": "gulp4galaxy",
+  "name": "waffle-pantry",
   "version": "2.0.0",
   "description": "The package for front-end team of Galaxy IT company",
   "author": "Galaxy IT <galaxy-it.net/>. The team of web development",
   "license": "ISC",
   "main": "gulpfile.js",
   "type": "commonjs",
+  "homepage": "https://Alex-H-galaxyit.github.io/waffle-pantry/",
   "scripts": {
     "start": "gulp",
     "fonts": "gulp fonts:generate",
     "build": "gulp build",
     "prod": "gulp build --env=production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "fix:eslint": "eslint src/**/*.js --fix --config .eslintrc.json",
     "fix:stylelint": "stylelint src/**/*.{css,scss} --fix"
   },
@@ -44,6 +47,7 @@
     "del": "^6.0.0",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
+    "gh-pages": "^6.1.0",
     "gulp": "^4.0.2",
     "gulp-changed": "^4.0.3",
     "gulp-cheerio": "^1.0.0",
