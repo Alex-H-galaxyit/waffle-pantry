@@ -1,18 +1,8 @@
 {% set recipes = json('recipes') %}
 
 <section class="recipes">
-  <!-- DELETE -->
-  <!--   <div class="container">
-    {% for test in tests %}
-      {% for foo in test.employees %}
-        <div>
-          {{ foo.name }}
-        </div>
-      {% endfor %}
-    {% endfor %}
-  </div>   -->
   <div class="container">
-    <div class="recipes-content">
+    <div class="recipes-content" data-aos="fade" data-aos-duration="400">
       <h2 class="section-title">
         Authentic <span>recipes</span>
       </h2>
@@ -23,7 +13,7 @@
 
     <ul class="recipes-list">
       {% for recipe in recipes.recipes %}
-        <li class="recipes-item">
+        <li class="recipes-item" data-aos="flip-left" data-aos-duration="450">
           <a href="#"><img src="{{ recipe }}" alt="food" /></a>
 
           <div class="recipes-item__content">

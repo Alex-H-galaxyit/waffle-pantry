@@ -8,6 +8,10 @@ import { hero } from "./modules/hero"
 import { products } from "./modules/products"
 import { tabs } from "./modules/tabs"
 
+AOS.init({
+  easing: "ease-in-sine",
+})
+
 hero()
 products()
 tabs(".tabs__header", ".tabs__header-item", ".tabs__content-item", "tabs__header-item--active")

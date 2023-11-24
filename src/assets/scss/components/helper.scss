@@ -1,6 +1,5 @@
 .helper {
   position: fixed;
-  left: calc(100% - 25px);
   top: 50%;
   transform: rotate(-90deg);
   transform-origin: 0% 0%;
@@ -16,5 +15,16 @@
   & span {
     margin-left: 3px;
     font-size: 14px;
+  }
+}
+
+[data-aos="aos-helper"] {
+  left: 100%;
+  opacity: 0;
+  transition-property: left, opacity;
+
+  &.aos-animate {
+    left: calc(100% - 25px);
+    opacity: 1;
   }
 }

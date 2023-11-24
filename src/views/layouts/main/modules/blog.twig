@@ -15,7 +15,7 @@
     <div class="tabs-blog">
       <div class="tabs-blog__content">
         <div class="tabs-blog__content-item">
-          <div class="blog-content">
+          <div class="blog-content" data-aos="fade" data-aos-duration="400">
             <h2 class="section-title section-title--second">
               FRESH <span>OFF THE PRESS</span>
             </h2>
@@ -26,7 +26,7 @@
 
           <ul class="blog-list">
             {% for blog in blogs.blogs %}
-              <li class="blog-item">
+              <li class="blog-item" data-aos="flip-left" data-aos-duration="450">
                 <a href="#"><img src="{{ blog }}" alt="food" /></a>
 
                 <div class="recipes-item__content blog-item__content">
