@@ -511,15 +511,6 @@ fieldset {
   pointer-events: none;
   z-index: 1;
 }
-.main-nav__logo-wrapper img {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  max-width: 59px;
-  z-index: -1;
-}
 .main-nav__logo-bg {
   position: relative;
   display: -webkit-box;
